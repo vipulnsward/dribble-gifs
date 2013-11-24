@@ -38,21 +38,13 @@
 </div>
 
 <div id="links">
-  <a href="http://lorempixel.com/400/200/" title="Banana" data-gallery>
-    <img src="http://lorempixel.com/400/200/" alt="Banana">
+
+  <% @shots.each do |shot|%>
+  <a href="<%=shot.image_url%>" title="<%=shot.title%>" data-gallery>
+    <img src="<%=shot.image_url%>" alt="<%=shot.title%>" width="30%" style="padding: 2% 2% 2% 2%">
   </a>
-  <a href="http://lorempixel.com/400/201/" title="Apple" data-gallery>
-    <img src="http://lorempixel.com/400/201/" alt="Apple">
-  </a>
-  <a href="http://lorempixel.com/400/202/" title="Orange" data-gallery>
-    <img src="http://lorempixel.com/400/202/" alt="Orange">
-  </a>
-  <a href="http://lorempixel.com/400/203/" title="Banana" data-gallery>
-    <img src="http://lorempixel.com/400/203/" alt="Banana">
-  </a>
-  <a href="http://lorempixel.com/400/204/" title="Banana" data-gallery>
-    <img src="http://lorempixel.com/400/204/" alt="Banana">
-  </a>
+  <%end%>
+
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -60,7 +52,7 @@
 <script src="http://blueimp.github.io/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.js"></script>
 
 <script type="text/javascript">
-  <!--Shabby initializations-->
+  <!--Shabby_initializations-->
     $('#blueimp-gallery').data('useBootstrapModal', false);
     $('#blueimp-gallery').toggleClass('blueimp-gallery-controls', true);
 </script>
